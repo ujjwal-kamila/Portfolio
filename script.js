@@ -119,6 +119,7 @@ document.getElementById('contact-form').addEventListener('submit', async (e) => 
     const data = {
         name: formData.get('name'),
         email: formData.get('email'),
+        number: formData.get('number'),
         subject: formData.get('subject'),
         message: formData.get('message'),
         time: new Date().toLocaleString()
@@ -128,6 +129,7 @@ document.getElementById('contact-form').addEventListener('submit', async (e) => 
         await emailjs.send('service_8jg1v1l', 'template_hvrwrew', {
             from_name: data.name,
             from_email: data.email,
+            phone_number: data.number,
             subject: data.subject,
             message: data.message,
             time: data.time,
