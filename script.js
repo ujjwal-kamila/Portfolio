@@ -119,7 +119,7 @@ document.getElementById('contact-form').addEventListener('submit', async (e) => 
     const data = {
         name: formData.get('name'),
         email: formData.get('email'),
-        number: formData.get('number'),
+        number: formData.get('mobile'),
         subject: formData.get('subject'),
         message: formData.get('message'),
         time: new Date().toLocaleString()
